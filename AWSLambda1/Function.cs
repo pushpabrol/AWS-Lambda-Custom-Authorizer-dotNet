@@ -79,7 +79,6 @@ namespace AWSLambda1
             APIGatewayCustomAuthorizerContextOutput contextOutput = new APIGatewayCustomAuthorizerContextOutput();
             contextOutput["User"] = authorized ? subject.Value : null;
             contextOutput["Path"] = apigAuthRequest.MethodArn;
-            //adding a permissions array - ideally this would be in a claim or the scope from the token
             var permissions = scopes ?? new string[]{};
 
             contextOutput["Permissions"] = string.Join(",", permissions);
