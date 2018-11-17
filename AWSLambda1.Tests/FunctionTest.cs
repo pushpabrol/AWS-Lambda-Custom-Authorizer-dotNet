@@ -14,7 +14,7 @@ namespace AWSLambda1.Tests
     public class FunctionTest
     {
         [Fact]
-        public void TestToUpperFunction()
+        public void TestTokenValidation()
         {
             try
             {
